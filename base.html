@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Flask App{% endblock %}</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Segoe UI, sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            color:white;
+            padding:30px;
+        }
+
+        .container{
+            width:500px;
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+            border:1px solid rgba(255,255,255,0.1);
+            border-radius:25px;
+            padding:40px;
+            box-shadow:0 15px 35px rgba(0,0,0,0.4);
+            animation:fadeIn 1s ease;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:10px;
+            font-size:38px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#cbd5e1;
+            margin-bottom:30px;
+            font-size:15px;
+        }
+
+        h2{
+            color:#60a5fa;
+            margin-bottom:15px;
+        }
+
+        p{
+            color:#d1d5db;
+            line-height:1.7;
+            margin-bottom:20px;
+        }
+
+        h3{
+            margin-bottom:15px;
+            color:#f8fafc;
+        }
+
+        ul{
+            list-style:none;
+        }
+
+        li{
+            background:rgba(255,255,255,0.08);
+            margin-bottom:12px;
+            padding:14px;
+            border-radius:12px;
+            transition:0.3s;
+            border-left:5px solid #3b82f6;
+        }
+
+        li:hover{
+            transform:translateX(8px);
+            background:rgba(255,255,255,0.12);
+        }
+
+        .footer{
+            text-align:center;
+            margin-top:30px;
+            color:#94a3b8;
+            font-size:14px;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(20px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>✨ Flask Internship Task</h1>
+
+        <div class="subtitle">
+            Dynamic Web Page using Flask & Jinja2
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <div class="footer">
+            Developed by Sahana Sharon
+        </div>
+
+    </div>
+
+</body>
+</html>

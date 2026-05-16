@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+
+<h2>Welcome {{ username }} 👋</h2>
+
+<p>
+    This web application demonstrates Flask templating,
+    Jinja2 variables, loops, and template inheritance.
+</p>
+
+<h3>📌 Internship Learning Tasks</h3>
+
+<ul>
+    {% for task in task_list %}
+        <li>{{ task }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
